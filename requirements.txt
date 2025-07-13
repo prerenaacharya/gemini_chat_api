@@ -11,3 +11,4 @@ celery
 aiohttp
 stripe
 httpx
+pydantic-settings
