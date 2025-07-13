@@ -17,7 +17,8 @@ from rq import Queue
 router = APIRouter()
 
 # Redis queue setup
-redis_conn = redis.Redis()
+redis_url = os.environ.get("REDIS_URL", "redis://localhost:6379")  # fallback for local
+redis_conn = redis.Redis.from_url(redis_url)
 queue = Queue(connection=redis_conn)
 
 # Dependency to get DB session
