@@ -12,3 +12,6 @@ aiohttp
 stripe
 httpx
 pydantic-settings
+google
+google-generativeai
+rq
