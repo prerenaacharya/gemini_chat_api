@@ -10,6 +10,7 @@ from app.chatroom.schemas import ChatroomCreate, MessageCreate
 from app.chatroom.gemini import call_gemini_api
 from app.chatroom.utils import stream_gemini_response_with_db
 import json
+import os
 
 import redis
 from rq import Queue
